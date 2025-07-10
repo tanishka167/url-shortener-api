@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "d18c1eb0-ec8b-4c09-a6ff-089835623282",
+		"name": "URL Shortner API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39446963"
+	},
+	"item": [
+		{
+			"name": "shorten url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"https://www.yahoo.com\",\r\n  \"expiryDate\": \"2025-12-31T23:59:59Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/url",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redirect to Original URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/bws_ahuKX",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"bws_ahuKX"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get URL Analytics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/url/analytics/bws_ahuKX",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"url",
+						"analytics",
+						"bws_ahuKX"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
