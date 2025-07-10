@@ -18,7 +18,7 @@ async function handleGenerateNewShortURL(req,res){
         expiryDate: body.expiryDate ? new Date(body.expiryDate) : undefined
     });
     
-    return res.json({ shortUrl: `https://short.ly/${shortID}` });
+    return res.json({ shortUrl: `http://localhost:8001/${shortID}` });
 
 }
 
